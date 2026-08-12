@@ -45,16 +45,24 @@ Vexora is designed around native Node.js capabilities, offering maximum performa
 
 ```mermaid
 graph TD
-    Client[📱/🌐 Client Request] --> Guard[🛡️ Security Guard & Rate Limiter]
-    Guard --> Context[🧵 Context Setup - AsyncLocalStorage]
-    Context --> Router[🛣️ RouteController & ApiController]
-    Router --> Controller[⚙️ AsyncFunction Sandbox Evaluator]
-    Controller --> DBRouter[🗄️ Database Pool Multiplexer]
-    DBRouter --> MySQL[(🐬 MySQL Pool)]
-    DBRouter --> PG[(🐘 PostgreSQL Pool)]
-    Controller --> Cache[💾 In-Memory TTL RAM Cache]
-    Controller --> Logger[📝 Audit Logger - Silent Trace & Masking]
-    Logger --> Disk[📁 .Vexora/logs/date.json]
+    Client["🌐 Client Request"] --> BotShield["🤖 Bot Behavior Analyzer"]
+    BotShield --> IPGuard["🚫 IP Block & Rate Limiter"]
+    IPGuard --> SuspiciousTracker["⚠️ Suspicious Activity Tracker"]
+    SuspiciousTracker --> SecurityHeaders["🛡️ Helmet Headers & CORS"]
+    SecurityHeaders --> RouteDecision{"Is /api/* ?"}
+    RouteDecision -->|Yes| ApiController["🛣️ API Controller<br/>(Whitelist Router)"]
+    RouteDecision -->|No| StaticServer["📁 Static File Server"]
+    ApiController --> Sandbox["📦 Sandbox Evaluator"]
+    Sandbox --> DB["🗄️ Database Multiplexer"]
+    Sandbox --> Cache["💾 RAM Cache"]
+    Sandbox --> Mail["✉️ SMTP Client"]
+    Sandbox --> Queue["📋 Queue Worker"]
+    Sandbox --> Storage["📁 File Storage"]
+    DB --> MySQL[("MySQL Pool")]
+    DB --> PG[("PostgreSQL Pool")]
+    DB --> Mongo[("MongoDB Client")]
+    ApiController --> Logger["🪵 Audit Logger"]
+    Logger --> Disk[".vexora_log/"]
 ```
 
 ### 🔑 Key Architecture Concepts
