@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=61AFEF&center=true&vcenter=true&width=600&lines=👋+Hi%2C+I'm+Satyam+Kumar;Full-Stack+%26+Backend+Developer;Framework+%26+Developer+Tools+Builder;Creator+of+Vexora+Framework" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=61AFEF&center=true&vcenter=true&width=600&lines=Hi%2C+I'm+Satyam+Kumar;Full-Stack+%26+Backend+Developer;Framework+%26+Developer+Tools+Builder;Creator+of+Vexora+Framework" alt="Typing SVG" />
 </h1>
 
 <p align="center">
@@ -13,7 +13,7 @@
   <a href="https://www.npmjs.com/package/vexora"><img src="https://img.shields.io/npm/v/vexora?style=for-the-badge&label=VEXORA&color=cb3837" alt="Vexora npm"/></a>
 </p>
 <p align="center">
-  <img src="https://img.shields.io/github/commit-activity/y/Satyam9725?style=for-the-badge&label=YEARLY%20ACTIVITY&color=8957e5" alt="Yearly Activity"/>
+  <img src="https://img.shields.io/github/commit-activity/y/Satyam9725/satyam9725?style=for-the-badge&label=YEARLY%20ACTIVITY&color=8957e5" alt="Yearly Activity"/>
 </p>
 
 ---
